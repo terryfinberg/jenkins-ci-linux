@@ -13,5 +13,12 @@ Follw their instructions there.
 ## Tools Installed
 You will have OpenJDK, Maven, Git, and Jenkins latest running on Tomcat 8.
 
+## Tomcat Maven Plugin
+You will find an example pom.xml which shows the build configuration for using Continuous Deployment to the Tomcat server. The script adds a manager-script user with username `maven` in the `tomcat-users.xml` which is also configured for POM use in the Maven `settings.xml` in the `<server>` tag. This way we do not have to put Tomcat username/password credentials directly into the POM file. You can then build the project with:
+
+`mvn tomcat7:deploy`
+
+For more information, goto http://tomcat.apache.org/maven-plugin-trunk/tomcat7-maven-plugin/usage.html
+
 ## Troubleshooting
 The only issues with the script is if the Tomcat or Maven download URLs change. In this case, find the 2 `wget` statements and update the URLs accordingly.
