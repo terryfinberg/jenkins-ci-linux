@@ -9,7 +9,7 @@ sudo yum install -y git
 git --version
 
 # use HTTP GET to fetch maven
-wget "http://mirrors.gigenet.com/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz"
+wget "http://www.gtlib.gatech.edu/pub/apache/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz"
 
 # list contents of current directory
 ls
@@ -27,7 +27,7 @@ rm ~/apache-maven-3.6.0-bin.tar.gz
 mv ~/apache-maven-3.6.0 ~/maven
 
 # use HTTP GET to fetch Tomcat
-wget "http://mirror.reverse.net/pub/apache/tomcat/tomcat-8/v8.5.39/bin/apache-tomcat-8.5.39.tar.gz"
+wget "http://mirrors.gigenet.com/apache/tomcat/tomcat-8/v8.5.40/bin/apache-tomcat-8.5.40.tar.gz"
 
 # expands gunzip file
 tar -zxf ~/apache-tomcat-8.5.39.tar.gz
