@@ -18,25 +18,25 @@ ls
 pwd
 
 # expands a gunzip file (tar means it is a folder and not a single file only)
-tar -zxf ~/apache-maven-3.6.0-bin.tar.gz
+tar -zxf ~/apache-maven-3.6.1-bin.tar.gz
 
 # remove unneeded file
-rm ~/apache-maven-3.6.0-bin.tar.gz
+rm ~/apache-maven-3.6.1-bin.tar.gz
 
 # rename files by moving them
-mv ~/apache-maven-3.6.0 ~/maven
+mv ~/apache-maven-3.6.1 ~/maven
 
 # use HTTP GET to fetch Tomcat
 wget "http://mirrors.gigenet.com/apache/tomcat/tomcat-8/v8.5.40/bin/apache-tomcat-8.5.40.tar.gz"
 
 # expands gunzip file
-tar -zxf ~/apache-tomcat-8.5.39.tar.gz
+tar -zxf ~/apache-tomcat-8.5.40.tar.gz
 
 # remove unneeded file
-rm ~/apache-tomcat-8.5.39.tar.gz 
+rm ~/apache-tomcat-8.5.40.tar.gz
 
 # rename files by moving them
-mv ~/apache-tomcat-8.5.39 ~/tomcat
+mv ~/apache-tomcat-8.5.40 ~/tomcat
 
 # add manager-gui role and tomcat user with this role.. 
 # echo prints something and > pipes the content into the file 
