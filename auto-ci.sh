@@ -9,7 +9,7 @@ sudo yum install -y git
 git --version
 
 # use HTTP GET to fetch maven
-wget "http://www.gtlib.gatech.edu/pub/apache/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz"
+wget "https://archive.apache.org/dist/maven/maven-3/3.3.3/binaries/apache-maven-3.3.3-bin.tar.gz"
 
 # list contents of current directory
 ls
@@ -18,25 +18,25 @@ ls
 pwd
 
 # expands a gunzip file (tar means it is a folder and not a single file only)
-tar -zxf ~/apache-maven-3.6.1-bin.tar.gz
+tar -zxf ~/apache-maven-3.3.3-bin.tar.gz
 
 # remove unneeded file
-rm ~/apache-maven-3.6.1-bin.tar.gz
+rm ~/apache-maven-3.3.3-bin.tar.gz
 
 # rename files by moving them
-mv ~/apache-maven-3.6.1 ~/maven
+mv ~/apache-maven-3.3.3 ~/maven
 
 # use HTTP GET to fetch Tomcat
-wget "http://mirrors.gigenet.com/apache/tomcat/tomcat-8/v8.5.40/bin/apache-tomcat-8.5.40.tar.gz"
+wget "https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.9/bin/apache-tomcat-8.5.9.tar.gz"
 
 # expands gunzip file
-tar -zxf ~/apache-tomcat-8.5.40.tar.gz
+tar -zxf ~/apache-tomcat-8.5.9.tar.gz
 
 # remove unneeded file
-rm ~/apache-tomcat-8.5.40.tar.gz
+rm ~/apache-tomcat-8.5.9.tar.gz
 
 # rename files by moving them
-mv ~/apache-tomcat-8.5.40 ~/tomcat
+mv ~/apache-tomcat-8.5.9 ~/tomcat
 
 # add manager-gui role and tomcat user with this role.. 
 # echo prints something and > pipes the content into the file 
