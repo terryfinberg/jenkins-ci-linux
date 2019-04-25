@@ -2,20 +2,6 @@
 # change directory to /home/ec2-user (user home)
 cd ~
 
-# Print output to the console
-echo "Paste Maven tar.gz download URL: "
-
-# read input from the user to store as a variable
-read maven
-# http://apache.mirrors.pair.com/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz
-
-# Print output to the console
-echo "Paste Tomcat tar.gz download URL: "
-
-# read input from the user to store as a variable
-read tomcat
-# http://apache.mirrors.ionfish.org/tomcat/tomcat-8/v8.5.40/bin/apache-tomcat-8.5.40.tar.gz
-
 # install Git using Yellowdog Update Manager
 sudo yum install -y git
 
@@ -23,7 +9,7 @@ sudo yum install -y git
 git --version
 
 # use HTTP GET to fetch maven
-wget $maven
+wget "http://www.gtlib.gatech.edu/pub/apache/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz"
 
 # list contents of current directory
 ls
@@ -31,31 +17,26 @@ ls
 # print working directory (where you are now)
 pwd
 
-m=${$maven##*/}
-m2=${m::-6}
-t=${$tomcat##*/}
-t2=${t::-6}
-
 # expands a gunzip file (tar means it is a folder and not a single file only)
-tar -zxf ~/$m
+tar -zxf ~/apache-maven-3.6.1-bin.tar.gz
 
 # remove unneeded file
-rm ~/$m
+rm ~/apache-maven-3.6.1-bin.tar.gz
 
 # rename files by moving them
-mv ~/$m ~/maven
+mv ~/apache-maven-3.6.1 ~/maven
 
 # use HTTP GET to fetch Tomcat
-wget $tomcat
+wget "http://mirrors.gigenet.com/apache/tomcat/tomcat-8/v8.5.40/bin/apache-tomcat-8.5.40.tar.gz"
 
 # expands gunzip file
-tar -zxf ~/$t
+tar -zxf ~/apache-tomcat-8.5.40.tar.gz
 
 # remove unneeded file
-rm ~/$t
+rm ~/apache-tomcat-8.5.40.tar.gz
 
 # rename files by moving them
-mv ~/$t2 ~/tomcat
+mv ~/apache-tomcat-8.5.40 ~/tomcat
 
 # add manager-gui role and tomcat user with this role.. 
 # echo prints something and > pipes the content into the file 
